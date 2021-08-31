@@ -54,9 +54,10 @@ function App() {
               as="div"
               threshold={0.5}
               rootMargin={matches ? "150px" : "0px"}
-              onChange={(inView, entry) =>
-                inView && useStore.setState({ index: 1 })
-              }
+              onChange={(inView, entry) => {
+                inView && useStore.setState({ index: 1 });
+                inView && useStore.setState({ showTv: false });
+              }}
             >
               <HowIWork />
             </InView>
@@ -66,9 +67,7 @@ function App() {
               rootMargin={matches ? "150px" : "0px"}
               onChange={(inView, entry) => {
                 inView && useStore.setState({ index: 1 });
-                inView
-                  ? useStore.setState({ showTv: true })
-                  : useStore.setState({ showTv: false });
+                inView && useStore.setState({ showTv: true });
               }}
             >
               <MyWorks />
@@ -79,9 +78,7 @@ function App() {
               rootMargin="55px 0px"
               onChange={(inView, entry) => {
                 inView && useStore.setState({ index: 0 });
-                inView
-                  ? useStore.setState({ showTv: false })
-                  : useStore.setState({ showTv: true });
+                inView && useStore.setState({ showTv: false });
               }}
             >
               <Contact />
