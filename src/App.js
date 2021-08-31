@@ -30,7 +30,7 @@ function App() {
   useEffect(() => {
     useStore.setState({ showTv: false });
   }, []);
-  console.log("tv is show?" showTv);
+  console.log("tv is show?", showTv);
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
@@ -45,7 +45,7 @@ function App() {
           <Grid item xs={12} md={6}>
             <InView
               as="div"
-              initialInView= {true}
+              initialInView={true}
               threshold={0.5}
               onChange={(inView, entry) => {
                 inView && useStore.setState({ index: 2 });
