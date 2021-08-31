@@ -30,7 +30,7 @@ function App() {
   useEffect(() => {
     useStore.setState({ showTv: false });
   }, []);
-
+  console.log(showTv);
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
@@ -46,9 +46,10 @@ function App() {
             <InView
               as="div"
               threshold={0.5}
-              onChange={(inView, entry) =>
-                inView && useStore.setState({ index: 2 })
-              }
+              onChange={(inView, entry) => {
+                inView && useStore.setState({ index: 2 });
+                inView && useStore.setState({ showTv: false });
+              }}
             >
               <Intro />
             </InView>
