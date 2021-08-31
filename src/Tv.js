@@ -73,7 +73,13 @@ export default function Tv(props) {
   // });
 
   return (
-    <animated.group ref={Tv} {...props} dispose={null} scale={scale}>
+    <animated.group
+      ref={Tv}
+      {...props}
+      dispose={null}
+      scale={scale}
+      visible={false}
+    >
       <mesh
         castShadow
         receiveShadow
