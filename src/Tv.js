@@ -45,7 +45,7 @@ export default function Tv(props) {
   img2.flipY = false;
   img.flipY = false;
   testPattern.flipY = false;
-  Tv.current.visible = false;
+
   // hide Tv when hand appears
   useEffect(() => {
     showTv ? (Tv.current.visible = true) : (Tv.current.visible = false);

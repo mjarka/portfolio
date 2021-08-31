@@ -35,7 +35,7 @@ const useStore = create((set, get) => ({
   strings: pl,
 
   // bool for TV if it's shown or not
-  showTv: false,
+  showTv: true,
 
   // show current KV in portfolio section
   kv: "biedronka",
