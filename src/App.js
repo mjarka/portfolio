@@ -25,6 +25,12 @@ function App() {
   const index = useStore((state) => state.index);
   // check if TV should be visible
   const showTv = useStore((state) => state.showTv);
+
+  // disable tv on first load
+  useEffect(() => {
+    useStore.setState({ showTv: false });
+  }, []);
+
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
