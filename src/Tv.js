@@ -111,4 +111,4 @@ export default function Tv(props) {
   );
 }
 
-useGLTF.preload("/tvsmall.glb");
+useGLTF.preload("tvsmall.glb");

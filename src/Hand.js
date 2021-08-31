@@ -23,7 +23,7 @@ export default function Hand(props) {
   const pen = useRef();
 
   // import animations
-  const { nodes, materials, animations } = useGLTF("/HandSimplyfied.glb");
+  const { nodes, materials, animations } = useGLTF("HandSimplyfied.glb");
   const { actions, names } = useAnimations(animations, group);
 
   // Lerp model between position and rotation
@@ -121,4 +121,4 @@ export default function Hand(props) {
   );
 }
 
-useGLTF.preload("/HandSimplyfied.glb");
+useGLTF.preload("HandSimplyfied.glb");
