@@ -5,6 +5,7 @@ import Hand from "./Hand";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 import { useTheme } from "@material-ui/core/styles";
 import Tv from "./Tv";
+import Smartphone from "./Smartphone";
 function Animation() {
   // support for media queries
   const theme = useTheme();
@@ -15,12 +16,13 @@ function Animation() {
       <directionalLight position={[8, 6, 3]} intensity={2} />
       <directionalLight position={[-12, 1, 3]} intensity={1} />
       <Suspense fallback={null}>
-        <Tv />
+        {/* <Tv /> */}
+        <Smartphone />
         {/* <Rig> */}
         <Hand scale={[0.2, 0.2, 0.2]} />
         <ContactShadows
           position={matches ? [0, -1.8, 0] : [0, -1.49, 0]}
-          width={4}
+          width={5}
           height={4}
           opacity={0.2}
           blur={2}

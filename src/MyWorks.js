@@ -54,7 +54,7 @@ function MyWorks() {
                 );
               })}
               <Box pt={2}>
-                <Typography variant="body2">{strings.myWorks}</Typography>
+                <Typography variant="body2">{strings[kv]}</Typography>
               </Box>
             </Grid>
           </Box>

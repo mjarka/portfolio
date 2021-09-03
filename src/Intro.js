@@ -30,7 +30,7 @@ function Intro() {
           </Box>
           <Box pt={2}>
             <Button variant="contained" color="primary" elevation={0}>
-              {strings.contact}
+              {strings.contactButton}
             </Button>
           </Box>
         </Grid>

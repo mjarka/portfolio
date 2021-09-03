@@ -111,7 +111,7 @@ export default function Tv(props) {
         material={nodes.Cylinder003.material}
       />
       <mesh castShadow receiveShadow geometry={nodes.Cube004.geometry}>
-        <meshStandardMaterial roughness={0.3} map={tvTexture} />
+        <meshBasicMaterial reflectivity={0} roughness={0} map={tvTexture} />
       </mesh>
     </animated.group>
   );
