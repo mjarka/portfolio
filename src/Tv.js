@@ -11,28 +11,30 @@ export default function Tv(props) {
   const { nodes, materials } = useGLTF("tvsmall.glb");
 
   // change texture selection for tv screen
-  const [img, img2, testPattern] = useTexture([
-    "tex.jpg",
-    "tex2.jpg",
+  const [circle2, circle3, circle4, mego1, netto1, testPattern] = useTexture([
+    "kvTextures/circle2.jpg",
+    "kvTextures/circle3.jpg",
+    "kvTextures/circle4.jpg",
+    "kvTextures/mego1.jpg",
+    "kvTextures/netto1.jpg",
     "testPattern.jpg",
   ]);
-
+  circle2.flipY = false;
+  circle3.flipY = false;
+  testPattern.flipY = false;
   // support for media queries
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.down("sm"));
 
   // import current KV selected from state management
   const kv = useStore((state) => state.kv);
-  console.log(kv);
 
   // Manage changing texture on tv screen
-  const [tvTexture, setTvTexture] = useState(img);
-  console.log(tvTexture);
+  const [tvTexture, setTvTexture] = useState(circle2);
 
   // import TV bool to change animation on scroll
   const showTv = useStore((state) => state.showTv);
   const index = useStore((state) => state.index);
-  console.log(index);
 
   // Lerp model between position and rotation
   useFrame((state) => {
@@ -41,10 +43,6 @@ export default function Tv(props) {
     // Tv.current.rotation.x = Math.sin(t / 2) / 12;
     Tv.current.rotation.y = Math.sin(t / 3) / 9;
   });
-
-  img2.flipY = false;
-  img.flipY = false;
-  testPattern.flipY = false;
 
   // hide Tv when hand appears
   useEffect(() => {
@@ -55,7 +53,7 @@ export default function Tv(props) {
   useEffect(() => {
     setTvTexture(testPattern);
     const timer = setTimeout(() => {
-      kv === "biedronka" ? setTvTexture(img2) : setTvTexture(img);
+      kv === "biedronka" ? setTvTexture(circle2) : setTvTexture(circle3);
     }, 200);
     return () => clearTimeout(timer);
   }, [kv]);

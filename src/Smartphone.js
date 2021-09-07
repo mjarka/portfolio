@@ -1,31 +1,18 @@
-import React, { useEffect, useRef, useState } from "react";
-import { useGLTF, useTexture } from "@react-three/drei";
+import React, { useEffect, useRef } from "react";
+import { useGLTF } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 import { useTheme } from "@material-ui/core/styles";
 import useStore from "./store";
 import { useSpring, animated, config } from "@react-spring/three";
-
+import retailers from "./retailers";
+import TextureChanger from "./TextureChanger";
 export default function Model(props) {
   const smartphone = useRef();
-  const { nodes, materials } = useGLTF("/smartphone.glb");
-
-  // change texture selection for tv screen
-  const [img, img2, testPattern] = useTexture([
-    "tex.jpg",
-    "tex2.jpg",
-    "testPattern.jpg",
-  ]);
-  img2.flipY = false;
-  img.flipY = false;
-  testPattern.flipY = false;
+  const { nodes, materials } = useGLTF("smartphone.glb");
 
   // import current KV selected from state management
   const kv = useStore((state) => state.kv);
-
-  // Manage changing texture on tv screen
-  const [tvTexture, setTvTexture] = useState(img);
-  console.log(tvTexture);
 
   // support for media queries
   const theme = useTheme();
@@ -33,7 +20,6 @@ export default function Model(props) {
 
   // import TV bool to change animation on scroll
   const showTv = useStore((state) => state.showTv);
-  const index = useStore((state) => state.index);
 
   // hide Tv when hand appears
   useEffect(() => {
@@ -50,23 +36,13 @@ export default function Model(props) {
     smartphone.current.rotation.y = Math.sin(t / 3) / 9;
   });
 
-  // manage changing texture on tv screen
-  useEffect(() => {
-    setTvTexture(testPattern);
-    const timer = setTimeout(() => {
-      kv === "biedronka" ? setTvTexture(img2) : setTvTexture(img);
-    }, 200);
-    return () => clearTimeout(timer);
-  }, [kv]);
-
   // define spring to change scale on scroll
   const { scale, rotation } = useSpring({
     scale: showTv ? (matches ? 3.1 : 2.6) : 0.4,
     config: config.wobbly,
-    rotation:
-      kv === "biedronka"
-        ? [-Math.PI / 6, 0, 0]
-        : [-Math.PI / 7, 0, -Math.PI / 2],
+    rotation: retailers[kv]["horizontal"]
+      ? [-Math.PI / 7, 0, -Math.PI / 2]
+      : [-Math.PI / 6, 0, 0],
   });
 
   return (
@@ -90,7 +66,7 @@ export default function Model(props) {
           geometry={nodes.Plane_2.geometry}
           material={materials["Material.002"]}
         >
-          <meshStandardMaterial roughness={0.3} map={tvTexture} />
+          <TextureChanger />
         </mesh>
         <mesh
           castShadow
@@ -103,4 +79,4 @@ export default function Model(props) {
   );
 }
 
-useGLTF.preload("/smartphone.glb");
+useGLTF.preload("smartphone.glb");

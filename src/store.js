@@ -11,12 +11,18 @@ const pl = {
   myWorksHeader: "Moje prace",
   myWorks:
     "Współpracowałem nad kampaniami dla największych marek. Od pomysłu do wdrożenia. Prócz warsztatu graficznego mogę pomóc Ci w koncepcie Twojej marki.",
+  freeTimeHeader: "W wolnym czasie",
+  freeTime:
+    "Gram na gitarze, tworzę muzykę i uczę się robić takie strony jak ta. ",
   contactHeader: "Kontakt",
-  contact:
-    "Jeżeli masz pytania lub chcesz pogadać to napisz do mnie na marcinjarka@gmail.com lub zadzwoń",
+  contact: "Jeżeli masz pytania lub chcesz pogadać to napisz do mnie na ",
+  mail: "marcinjarka@gmail.com",
+  circlek:
+    "bicycle rights. Yuccie pok pok gentrify ennui slow-carb wolf squid godard echo park waistcoat offal. Seitan drinking vinegar franzen forage actually c",
   auchan:
     "bicycle rights. Yuccie pok pok gentrify ennui slow-carb wolf squid godard echo park waistcoat offal. Seitan drinking vinegar franzen forage actually c",
-  biedronka: "ore they sold out, meditation slow-carb flexitari",
+  biedronka:
+    "ore they sold ou sothey sothey sold ou old ou old ou sold ou sold out, meditation slow-carb flexitari",
   kaufland:
     " +1 tumblr austin. 3 wolf moon put a bird on it trust fund stumptown authentic synth biodiesel ramps. Tattooed jean shorts iPhone hexagon, cred hell of seitan sartorial knausgaard flannel flexitarian. Chambra",
   maxima:
@@ -39,8 +45,13 @@ const en = {
   myWorks:
     "I have worked on campaigns for major brands. From idea to implementation. Apart from graphic design workshop I can help you with the concept of your brand.",
   contactHeader: "Contact",
-  contact:
-    "If you have questions or want to chat, email me at marcinjarka@gmail.com or call",
+  contact: "If you have questions or want to chat, email me at ",
+  mail: "marcinjarka@gmail.com",
+  freeTimeHeader: "In my free time",
+  freeTime:
+    "I play guitar, make music, and learn to make websites like this one. ",
+  circlek:
+    "godustainable fingerstachustainable fingerstachard, chia squid yuccie. Sustainable fingerstache austin, bespoke next level chia butcher quinoa selfies chartreuse pop-up marfa etsy lomo.",
   auchan:
     "godard, chia squid yuccie. Sustainable fingerstache austin, bespoke next level chia butcher quinoa selfies chartreuse pop-up marfa etsy lomo.",
   biedronka:
@@ -66,11 +77,15 @@ const useStore = create((set, get) => ({
   // language for copy
   strings: pl,
 
+  // reset loader animation
+  loaderReset: false,
+  // prevent animation
+  immediate: false,
   // bool for TV if it's shown or not
   showTv: false,
 
   // show current KV in portfolio section
-  kv: "biedronka",
+  kv: "circlek",
 
   //   increasePopulation: () => set((state) => ({ bears: state.bears + 1 })),
   changeLanguage: () =>

@@ -60,6 +60,12 @@ export default function Hand(props) {
   const { opacity } = useSpring({
     opacity: index !== 1 ? 0 : 1,
   });
+  const { spikesOpacity } = useSpring({
+    spikesOpacity: index === 6 ? 1 : 0,
+  });
+  const { fiberColor } = useSpring({
+    fiberColor: index === 6 ? "#1f1f24" : "#e87404",
+  });
 
   // animate hand when TV dissapears
   const { scale } = useSpring({
@@ -74,9 +80,10 @@ export default function Hand(props) {
         scale={scale}
       >
         <primitive object={nodes.Bone042} />
-        <skinnedMesh
+        <a.skinnedMesh
           geometry={nodes.hand.geometry}
           material={materials.Fiber}
+          material-color={fiberColor}
           skeleton={nodes.hand.skeleton}
         />
         <skinnedMesh
@@ -116,6 +123,13 @@ export default function Hand(props) {
             />
           </skinnedMesh>
         </group>
+        <a.skinnedMesh
+          geometry={nodes.hand_6.geometry}
+          material={materials.silver}
+          material-transparent={true}
+          material-opacity={spikesOpacity}
+          skeleton={nodes.hand_6.skeleton}
+        />
       </a.group>
     </group>
   );

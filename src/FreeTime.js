@@ -1,17 +1,15 @@
 import React from "react";
 import { Grid, Typography } from "@material-ui/core";
 import Box from "@material-ui/core/Box";
-import Button from "@material-ui/core/Button";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 import { useTheme } from "@material-ui/core/styles";
 import useStore from "./store";
-import { InView } from "react-intersection-observer";
-function Intro() {
-  // import theme and breakpoints for scaling purposes
+import InView from "react-intersection-observer";
+function FreeTime() {
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.down("sm"));
 
-  // import store with states to change language
+  // import text strings
   const strings = useStore((state) => state.strings);
 
   return (
@@ -25,23 +23,15 @@ function Intro() {
       >
         <InView
           as="div"
-          initialInView={true}
+          threshold={0.5}
           onChange={(inView, entry) => {
-            inView
-              ? useStore.setState({ index: 2 })
-              : useStore.setState({ index: 1 });
-            inView && useStore.setState({ showTv: false });
+            inView && useStore.setState({ index: 6 });
           }}
         >
           <Grid item xs={8} lg={4} order={{ xs: 22, lg: 1 }}>
-            <Typography variant="h3">{strings.hello}</Typography>
-            <Box pt={1}>
-              <Typography variant="body1">{strings.intro}</Typography>
-            </Box>
+            <Typography variant="h3">{strings.freeTimeHeader}</Typography>
             <Box pt={2}>
-              <Button variant="contained" color="primary" elevation={0}>
-                {strings.contactButton}
-              </Button>
+              <Typography variant="body1">{strings.freeTime}</Typography>
             </Box>
           </Grid>
         </InView>
@@ -50,4 +40,4 @@ function Intro() {
   );
 }
 
-export default Intro;
+export default FreeTime;

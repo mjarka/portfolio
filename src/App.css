@@ -16,3 +16,13 @@
 .pointer {
   cursor: pointer;
 }
+.accent {
+  color: #fea907;
+}
+.loader {
+  height: 5px;
+
+  color: red;
+  background-color: #fea907;
+  margin-top: 10px;
+}

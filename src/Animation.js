@@ -4,7 +4,6 @@ import React, { Suspense } from "react";
 import Hand from "./Hand";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 import { useTheme } from "@material-ui/core/styles";
-import Tv from "./Tv";
 import Smartphone from "./Smartphone";
 function Animation() {
   // support for media queries
@@ -16,7 +15,6 @@ function Animation() {
       <directionalLight position={[8, 6, 3]} intensity={2} />
       <directionalLight position={[-12, 1, 3]} intensity={1} />
       <Suspense fallback={null}>
-        {/* <Tv /> */}
         <Smartphone />
         {/* <Rig> */}
         <Hand scale={[0.2, 0.2, 0.2]} />
