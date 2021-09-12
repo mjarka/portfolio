@@ -21,29 +21,29 @@ const retailers = {
     number: 3,
     horizontal: false,
   },
-  maxima: {
-    icon: "icons/maxima.svg",
-    number: [1, 2, 3],
-    horizontal: true,
-  },
+  // maxima: {
+  //   icon: "icons/maxima.svg",
+  //   number: [1, 2, 3],
+  //   horizontal: true,
+  // },
   rimi: {
     icon: "icons/rimi.svg",
-    number: 1,
-    horizontal: true,
+    number: [5, 6],
+    horizontal: false,
   },
   spar: {
     icon: "icons/spar.svg",
-    number: 4,
-    horizontal: true,
+    number: [8, 9],
+    horizontal: false,
   },
   wiko: {
     icon: "icons/wiko.svg",
-    number: 0,
+    number: [10, 11],
     horizontal: true,
   },
   netto: {
     icon: "icons/netto.svg",
-    number: 3,
+    number: 4,
     horizontal: true,
   },
 };

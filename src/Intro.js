@@ -38,11 +38,6 @@ function Intro() {
             <Box pt={1}>
               <Typography variant="body1">{strings.intro}</Typography>
             </Box>
-            <Box pt={2}>
-              <Button variant="contained" color="primary" elevation={0}>
-                {strings.contactButton}
-              </Button>
-            </Box>
           </Grid>
         </InView>
       </Box>

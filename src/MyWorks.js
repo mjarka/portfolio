@@ -7,6 +7,7 @@ import retailers from "./retailers";
 import useStore from "./store";
 import InView from "react-intersection-observer";
 import Loader from "./Loader";
+import RetailersIcons from "./RetailersIcons";
 
 function MyWorks() {
   const theme = useTheme();
@@ -44,25 +45,7 @@ function MyWorks() {
               <Loader />
               <Grid container alignItems="center" justifyContent="center">
                 {/* Map through retailers to show their icon and set state onClick */}
-                {Object.keys(retailers).map(function (key) {
-                  return (
-                    <Grid
-                      key={key}
-                      item
-                      xs={3}
-                      sm={3}
-                      onClick={() => useStore.setState({ kv: key })}
-                    >
-                      <Box pr={2} pt={2}>
-                        <img
-                          src={retailers[key]["icon"]}
-                          height="36px"
-                          className="pointer"
-                        />
-                      </Box>
-                    </Grid>
-                  );
-                })}
+                <RetailersIcons />
                 <Box pt={2}>
                   <Typography variant="body2">{strings[kv]}</Typography>
                 </Box>

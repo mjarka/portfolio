@@ -77,8 +77,6 @@ const useStore = create((set, get) => ({
   // language for copy
   strings: pl,
 
-  // reset loader animation
-  loaderReset: false,
   // prevent animation
   immediate: false,
   // bool for TV if it's shown or not
