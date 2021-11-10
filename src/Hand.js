@@ -60,6 +60,7 @@ export default function Hand(props) {
   const { opacity } = useSpring({
     opacity: index !== 1 ? 0 : 1,
   });
+
   const { spikesOpacity } = useSpring({
     spikesOpacity: index === 6 ? 1 : 0,
   });
@@ -90,11 +91,15 @@ export default function Hand(props) {
           geometry={nodes.hand_1.geometry}
           material={materials.Skin}
           skeleton={nodes.hand_1.skeleton}
+          castShadow
+          receiveShadow
         />
-        <skinnedMesh
+        <a.skinnedMesh
           geometry={nodes.hand_2.geometry}
           material={materials.Bone}
           skeleton={nodes.hand_2.skeleton}
+          material-opacity={spikesOpacity}
+          material-transparent={true}
         />
         <skinnedMesh
           geometry={nodes.hand_3.geometry}
@@ -103,6 +108,8 @@ export default function Hand(props) {
         />
         <group ref={pen}>
           <skinnedMesh
+            castShadow
+            receiveShadow
             geometry={nodes.hand_4.geometry}
             skeleton={nodes.hand_4.skeleton}
           >

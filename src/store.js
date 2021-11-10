@@ -18,20 +18,21 @@ const pl = {
   contact: "Jeżeli masz pytania lub chcesz pogadać to napisz do mnie na ",
   mail: "marcinjarka@gmail.com",
   circlek:
-    "bicycle rights. Yuccie pok pok gentrify ennui slow-carb wolf squid godard echo park waistcoat offal. Seitan drinking vinegar franzen forage actually c",
-  auchan:
-    "bicycle rights. Yuccie pok pok gentrify ennui slow-carb wolf squid godard echo park waistcoat offal. Seitan drinking vinegar franzen forage actually c",
+    "Zaprojektowanie kampanii Angry Birds od strony graficznej łącznie z przygotowaniem materiałów POS i przygotowaniem do druku",
+  logo: "Garść logotypów dla różnych marek. ",
   biedronka:
     "ore they sold ou sothey sothey sold ou old ou old ou sold ou sold out, meditation slow-carb flexitari",
   kaufland:
     " +1 tumblr austin. 3 wolf moon put a bird on it trust fund stumptown authentic synth biodiesel ramps. Tattooed jean shorts iPhone hexagon, cred hell of seitan sartorial knausgaard flannel flexitarian. Chambra",
   maxima:
     "dard, chia squid yuccie. Sustainable fingerstache austin, bespoke next level chia butcher quinoa selfies chartreuse pop-up marfa etsy lomo. B",
-  rimi: "godard, cherstache austin, bespoke next level chia bia squid yuccie. Sustainable fingutcher quinoa selfies chartreuse pop-up marfa etsy lomo.",
-  spar: "uthentian shorts iPhone hexagon, cred hell of seitan sarc synth biodiesel ramps. Tattooed jetorial knausgaard flannel flexitarian. Chambray cr",
-  wiko: "J jianbing chicharrones kinfolk, cornhole +1. Tousled ornhole +1. Touornhole +1. Toufranzen intellig",
+  rimi: "Przygotowanie Key Visuala do kampanii KitchenAid dla sieci sklepów RIMI ",
+  spar: 'Przygotowanie Key Visuala oraz logotypu do kampanii "Strażnicy świeżości" dla Spar Polska oraz Key Visuala i materiałow POS do kampanii "HeyClay" dla Spar Hungary  ',
+  wiko: "Współpraca przy przygotowaniu materiałów social-media oraz materiałów drukowanych",
   netto:
-    "Jade tilde vevel portland tattgan food truck man bun next level portland tattooed retro flezwoń",
+    'Przygotowanie Key Visuala do kampanii "Hey Clay - masa kreatywności" dla sieci sklepów Netto',
+  posters:
+    "Seria plakatów przygotowana do filmów Davida Finchera oraz abstrakcje 3d. Plakaty przygotowane w różnych stylach- często przy pomocy programu 3d",
 };
 
 const en = {
@@ -52,8 +53,7 @@ const en = {
     "I play guitar, make music, and learn to make websites like this one. ",
   circlek:
     "godustainable fingerstachustainable fingerstachard, chia squid yuccie. Sustainable fingerstache austin, bespoke next level chia butcher quinoa selfies chartreuse pop-up marfa etsy lomo.",
-  auchan:
-    "godard, chia squid yuccie. Sustainable fingerstache austin, bespoke next level chia butcher quinoa selfies chartreuse pop-up marfa etsy lomo.",
+  logo: "Bunch of logotypes for various brands",
   biedronka:
     "uthentic synth biodiesel ramps. Tattooed jean shorts iPhone hexagon, cred hell of seitan sartorial knausgaard flannel flexitarian. Chambray cr",
   kaufland:
@@ -64,6 +64,8 @@ const en = {
   spar: "uthentic synth biodiesel ramps. Tattooed jean shorts iPhone hexagon, cred hell of seitan sartorial knausgaard flannel flexitarian. Chambray cr",
   wiko: "J jianbing chicharrones kinfolk, cornhole +1. Tousled franzen intellig",
   netto:
+    "Jade tilde vegan food truck man bun next level portland tattooed retro flezwoń",
+  posters:
     "Jade tilde vegan food truck man bun next level portland tattooed retro flezwoń",
 };
 

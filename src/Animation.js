@@ -1,5 +1,5 @@
-import { ContactShadows, Loader } from "@react-three/drei";
-import { Canvas, useLoader } from "@react-three/fiber";
+import { ContactShadows } from "@react-three/drei";
+import { Canvas } from "@react-three/fiber";
 import React, { Suspense } from "react";
 import Hand from "./Hand";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
@@ -12,9 +12,25 @@ function Animation() {
 
   return (
     <>
-      <Canvas camera={{ position: [-2, 2.3, 5], fov: 45 }}>
-        <directionalLight position={[8, 6, 3]} intensity={2} />
-        <directionalLight position={[-12, 1, 3]} intensity={1} />
+      <Canvas
+        shadows
+        camera={{
+          position: [-2, 2.3, 5],
+          fov: 45,
+          far: 14.2,
+          near: 3,
+        }}
+      >
+        <ambientLight intensity={0.4} />
+        <directionalLight
+          position={[8, 6, 3]}
+          intensity={2}
+          castShadow
+          shadow-mapSize-height={2048}
+          shadow-mapSize-width={2048}
+        />
+
+        <directionalLight position={[-12, -1, -3]} intensity={1} />
         <Suspense fallback={null}>
           <Smartphone />
           {/* <Rig> */}

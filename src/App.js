@@ -15,13 +15,12 @@ import HowIWork from "./HowIWork";
 import FreeTime from "./FreeTime";
 import LanguageChange from "./LanguageChange";
 import MyWorks from "./MyWorks";
-import { Loader } from "@react-three/drei";
 import CustomLoader from "./CustomLoader";
 import Fade from "@material-ui/core/Fade";
 
 function App() {
   // import progress for 3d from drei
-  const { active, progress, errors, item, loaded, total } = useProgress();
+  const { loaded } = useProgress();
   // styles for loader bar
   // const loaderStyle = {
   //   background: "rgb(86, 84, 82)",
@@ -42,7 +41,7 @@ function App() {
 
       <CssBaseline />
       <LanguageChange />
-      <Fade in={loaded === 17}>
+      <Fade in={loaded === 32}>
         <Box>
           <AnimationSection />
           <Grid container>

@@ -5,6 +5,8 @@ import useStore from "./store";
 import retailers from "./retailers";
 
 export default function RetailersIcons() {
+  const strings = useStore((state) => state.strings);
+  const kv = useStore((state) => state.kv);
   return (
     <>
       {/* Map through retailers to show their icon and set state onClick */}
@@ -17,12 +19,15 @@ export default function RetailersIcons() {
             sm={3}
             onClick={() => useStore.setState({ kv: key })}
           >
-            <Box pr={2} pt={2}>
-              <img
-                src={retailers[key]["icon"]}
-                height="36px"
+            <Box position="relative" display="flex" p={1}>
+              <svg
+                height="46px"
                 className="pointer"
-              />
+                fill={key === kv ? "#fea907" : "#c4840a"}
+                viewBox={retailers[key]["viewbox"]}
+              >
+                {retailers[key]["icon"]}
+              </svg>
             </Box>
           </Grid>
         );

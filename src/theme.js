@@ -9,7 +9,7 @@ let theme = createTheme({
       main: "#fea907",
     },
     background: {
-      default: "#565452",
+      default: "#565352",
     },
   },
   typography: {
@@ -38,8 +38,8 @@ let theme = createTheme({
       fontFamily: "Barlow",
       fontWeight: 500,
       color: "#efebe5",
-      fontSize: [13, "!important"],
-      lineHeight: 1,
+      fontSize: [14, "!important"],
+      lineHeight: 1.2,
     },
     fontFamily: [
       "Barlow Condensed",

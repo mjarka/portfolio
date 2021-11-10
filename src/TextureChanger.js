@@ -15,8 +15,23 @@ const TextureChanger = () => {
     rimi3,
     spar1,
     spar2,
+    spar3,
     wiko1,
     wiko2,
+    wiko3,
+    poster1,
+    poster2,
+    poster3,
+    poster4,
+    poster5,
+    poster6,
+    poster7,
+    logo1,
+    logo2,
+    logo3,
+    logo4,
+    logo5,
+    logo6,
     testPattern,
   ] = useTexture([
     "kvTextures/circle2.jpg",
@@ -29,8 +44,23 @@ const TextureChanger = () => {
     "kvTextures/rimi3.jpg",
     "kvTextures/spar1.jpg",
     "kvTextures/spar2.jpg",
+    "kvTextures/spar3.jpg",
     "kvTextures/wiko1.jpg",
     "kvTextures/wiko2.jpg",
+    "kvTextures/wiko3.jpg",
+    "kvTextures/poster1.jpg",
+    "kvTextures/poster2.jpg",
+    "kvTextures/poster3.jpg",
+    "kvTextures/poster4.jpg",
+    "kvTextures/poster5.jpg",
+    "kvTextures/poster6.jpg",
+    "kvTextures/poster7.jpg",
+    "kvTextures/logo1.jpg",
+    "kvTextures/logo2.jpg",
+    "kvTextures/logo3.jpg",
+    "kvTextures/logo4.jpg",
+    "kvTextures/logo5.jpg",
+    "kvTextures/logo6.jpg",
     "testPattern.jpg",
   ]);
   const textureArray = [
@@ -44,8 +74,23 @@ const TextureChanger = () => {
     rimi3,
     spar1,
     spar2,
+    spar3,
     wiko1,
     wiko2,
+    wiko3,
+    poster1,
+    poster2,
+    poster3,
+    poster4,
+    poster5,
+    poster6,
+    poster7,
+    logo1,
+    logo2,
+    logo3,
+    logo4,
+    logo5,
+    logo6,
     testPattern,
   ];
   textureArray.forEach((texture) => {
@@ -111,7 +156,7 @@ const TextureChanger = () => {
     };
   }, [kv, showTv]);
 
-  return <meshBasicMaterial roughness={0.3} map={tvTexture} />;
+  return <meshBasicMaterial roughness={1} map={tvTexture} />;
 };
 
 export default TextureChanger;
